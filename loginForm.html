@@ -1,20 +1,50 @@
+  
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Step1</title>
-        </head>
-        <body>
-            <form action="https://reqres.in/api/register" method="GET">
-                <fieldset>
-                    <legend>SignUp</legend>
-                    <h3>Login:</h3>
-                    <input name="login"/>
-                    <h3>Email:</h3>
-                    <input name="email"/>
-                    <h3>Password:</h3>
-                    <input type="password" name="password"/>
-                    <p><input type="submit" value="Войти"/></p>
-                </fieldset>
-            </form>
-        </body>
-    </html>
+<html>
+    <head>
+        <title>Step2</title>
+        <link rel="stylesheet" href="loginForm.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="tabs">
+            <div class="tab">
+                <input type="radio" id="signUpTab" name="tab-group" checked="checked">
+                <label for="signUpTab" class="tab-title">SIGN UP</label> 
+                <section class="tab-content">
+                    <form class="signUpForm" action="https://reqres.in/api/register" method="GET">
+                        <fieldset>
+                            <input name="phone" placeholder="Mobile Phone"/>
+                            <input name="email" placeholder="Email ID"/>
+                            <input type="password" name="password" placeholder="Password"/>
+                            <div class="consent">
+                                <input type="radio" id="radio">
+                                <label for="radio"></label>
+                                <h3>I agree to terms and conditions</h3>
+                            </div>
+                            <input type="submit" value="REGISTER"/>
+                        </fieldset>
+                    </form>
+                </section> 
+            </div>
+            <div class="tab">
+                <input type="radio" id="signInTab" name="tab-group">
+                <label for="signInTab" class="tab-title">SIGN IN</label> 
+                <section class="tab-content">
+                    <form class="signUpForm" action="https://reqres.in/api/login" method="GET">
+                        <fieldset>
+                            <input name="email" placeholder="Email ID"/>
+                            <input type="password" name="password" placeholder="Password"/>
+                            <div class="consent">
+                                <input type="radio" id="radio2">
+                                <label for="radio2"></label>
+                                <h3>I agree to terms and conditions</h3>
+                            </div>
+                            <input type="submit" value="LOGIN"/>
+                        </fieldset>
+                    </form>
+                </section> 
+            </div>
+        </div>
+    </body>
+</html>
