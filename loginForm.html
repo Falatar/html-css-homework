@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Step2</title>
+        <title>Step3</title>
         <link rel="stylesheet" href="loginForm.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -12,14 +12,14 @@
                 <input type="radio" id="signUpTab" name="tab-group" checked="checked">
                 <label for="signUpTab" class="tab-title">SIGN UP</label> 
                 <section class="tab-content">
-                    <form class="signUpForm" action="https://reqres.in/api/register" method="GET">
-                        <fieldset>
+                    <form class="signUpForm" action="https://reqres.in/api/register" method="POST">
+                        <fieldset class="fieldset">
                             <input name="phone" placeholder="Mobile Phone"/>
                             <input name="email" placeholder="Email ID"/>
                             <input type="password" name="password" placeholder="Password"/>
                             <div class="consent">
-                                <input type="radio" id="radio">
-                                <label for="radio"></label>
+                                <input type="checkbox" id="chkBox">
+                                <label for="chkBox"></label>
                                 <h3>I agree to terms and conditions</h3>
                             </div>
                             <input type="submit" value="REGISTER"/>
@@ -31,13 +31,13 @@
                 <input type="radio" id="signInTab" name="tab-group">
                 <label for="signInTab" class="tab-title">SIGN IN</label> 
                 <section class="tab-content">
-                    <form class="signUpForm" action="https://reqres.in/api/login" method="GET">
-                        <fieldset>
+                    <form class="signUpForm" action="https://reqres.in/api/login" method="POST">
+                        <fieldset class="fieldset">
                             <input name="email" placeholder="Email ID"/>
                             <input type="password" name="password" placeholder="Password"/>
                             <div class="consent">
-                                <input type="radio" id="radio2">
-                                <label for="radio2"></label>
+                                <input type="checkbox" id="chkBox2">
+                                <label for="chkBox2"></label>
                                 <h3>I agree to terms and conditions</h3>
                             </div>
                             <input type="submit" value="LOGIN"/>

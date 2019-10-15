@@ -16,7 +16,7 @@ body {
 }
 
 
-.signUpForm fieldset {
+.signUpForm .fieldset {
     border: none;
     background-color: rgba(0,0,0,0.5);
     text-align: center;
@@ -28,7 +28,7 @@ body {
     margin: 0;
 }
 
-.signUpForm fieldset input {
+.signUpForm .fieldset input {
     width: 80%;
     text-align: left;
     margin: auto;
@@ -41,7 +41,7 @@ body {
     font-size: 1em;
 }
 
-.signUpForm fieldset input[type="submit"] {
+.signUpForm .fieldset input[type="submit"] {
     width: 50%;
     height: 2.1em;
     margin: 5% 25%;
@@ -54,13 +54,13 @@ body {
     text-align: center;
 }
 
-div.consent {
+.consent {
     display: flex;
     flex-direction: row;
     margin-left: 10%;
 }
 
-div.consent h3 {
+.consent h3 {
     font-size: 0.55em;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
@@ -69,20 +69,20 @@ div.consent h3 {
     padding-top: 2px;
 }
 
-div.consent input {
+.consent input {
     display: none;  
 }
 
-div.consent input:checked + label {
+.consent input:checked + label {
     background:blue;
     border-color:blue;
 }
 
-div.consent input:checked + label:after {
+.consent input:checked + label:after {
     transform:scale(1.3)
 }
 
-div.consent label {
+.consent label {
     display:block;
     box-sizing:border-box;
     width:15px;height:15px;
@@ -94,7 +94,7 @@ div.consent label {
     margin-right: 2%;
 }
 
-div.consent label:before {
+.consent label:before {
     content:'';
     position:absolute;
     display:block;
@@ -106,7 +106,7 @@ div.consent label:before {
     border-radius:50%;
 }
 
-div.consent label:after {
+.consent label:after {
     content:'';
     display:block;
     height:100%;
@@ -190,15 +190,6 @@ div.tabs {
     from {
         border-color: rgba(255, 165, 0, 0);
     }
-    25% {
-        border-color: rgba(255, 165, 0, 0.25);
-    }
-    50% {
-        border-color: rgba(255, 165, 0, 0.5);
-    }
-    75% {
-        border-color: rgba(255, 165, 0, 0.75);
-    }
     to {
         border-color: rgba(255, 165, 0, 1);
     }
@@ -207,15 +198,6 @@ div.tabs {
 @keyframes unpushTab {
     from {
         border-color: rgba(255, 165, 0, 1);
-    }
-    25% {
-        border-color: rgba(255, 165, 0, 0.75);
-    }
-    50% {
-        border-color: rgba(255, 165, 0, 0.5);
-    }
-    75% {
-        border-color: rgba(255, 165, 0, 0.25);
     }
     to {
         border-color: rgba(255, 165, 0, 0);
