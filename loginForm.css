@@ -232,9 +232,3 @@ div.tabs {
         margin: 5% 25%;
     }
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    div.tabs {
-        
-    }
- }
