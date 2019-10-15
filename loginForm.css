@@ -4,6 +4,7 @@ html {
     width: 100vw;
     background-image: url('Layer.png');
     background-size: 100%;
+    outline: none;
 }
 
 body { 
@@ -26,6 +27,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 0;
+    padding-top: 18%;
 }
 
 .signUpForm .fieldset input {
@@ -35,7 +37,6 @@ body {
     background: none;
     border: none;
     margin-bottom: 20%;
-    margin-top: 20%;
     border-bottom: 3px solid rgba(255, 255, 255, 0.9);
     color: rgba(255, 255, 255, 0.9);
     font-size: 1em;
@@ -113,10 +114,6 @@ body {
     width:100%;
     background:url(https://cbwconline.com/IMG/Codepen/Check.svg) center center no-repeat;
     background-size:contain;
-}
-
-:active, :hover, :focus {
-    outline: none;
 }
 
 ::selection {
@@ -235,3 +232,9 @@ div.tabs {
         margin: 5% 25%;
     }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    div.tabs {
+        
+    }
+ }
