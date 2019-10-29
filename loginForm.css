@@ -3,7 +3,7 @@ html {
     height: 100vh;
     width: 100vw;
     background-image: url('Layer.png');
-    background-size: 100%;
+    background-size: cover;
     outline: none;
 }
 
@@ -53,6 +53,10 @@ body {
     font-size: 80%;
     background-color: darkorange;
     text-align: center;
+}
+
+section.tab-content {
+    top: 100%;
 }
 
 .consent {
@@ -125,19 +129,26 @@ input[type="radio"] {
     display: none;
 }
 
-.tab, .tab-title { 
-    display: inline-block;
+#signUpTab:not(:checked) ~ .tab-1, 
+#signInTab:not(:checked) ~ .tab-2 {
+    display: none;
+}
+
+.tab-1, .tab-2, .tab-title-1, .tab-title-2 { 
+    display: block;
     margin: 0 2%;
 }
 
-.tab :checked + .tab-title {
+.tab-1:checked + .tab-title-1, 
+.tab-2:checked + .tab-title-2 {
     position: relative;
     z-index: 1;
     animation: pushTab;
     animation-duration: 400ms;
 }
 
-.tab :not(:checked) + .tab-title {
+.tab-1:not(:checked) + .tab-title-1, 
+.tab-2:not(:checked) + .tab-title-2 {
     animation: unpushTab;
     animation-duration: 400ms;
     border: none;
@@ -148,28 +159,31 @@ input[type="radio"] {
    box-sizing: border-box;
    position: absolute;
     left: 0;
-    display: none;
 }
 
-.tab :checked + .tab-title + .tab-content { 
+.tab-1 :checked + .tab-title-1 + .tab-content,
+.tab-2 :checked + .tab-title-2 + .tab-content { 
     display: block; 
     width: 28vw;
 }
 
-.tab :checked ~ .tab-content { 
+.tab-1 :checked ~ .tab-content,
+.tab-2 :checked ~ .tab-content { 
     display: block;
 }
 
 .tabs {
+    display: flex;
+    flex-direction: row;
     position: relative;
     margin-top: 8%;
 }
 
-.tab-title {
+.tab-title-1, .tab-title-2 {
     background: none; 
     padding: 5px 0; 
-    width: 100%;
-    margin: 0;
+    width: 24%;
+    margin: 5px;
     border-bottom: 3px solid orange; 
     text-align: center;
     color: white;
