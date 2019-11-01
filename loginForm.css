@@ -107,7 +107,6 @@ section.tab-content {
     width:300%;
     top:-100%;
     left:-100%;
-    z-index:-1;
     border-radius:50%;
 }
 
@@ -129,26 +128,25 @@ input[type="radio"] {
     display: none;
 }
 
-#signUpTab:not(:checked) ~ .tab-1, 
-#signInTab:not(:checked) ~ .tab-2 {
+#signUpTab:not(:checked) ~ .tab-sign-up, 
+#signInTab:not(:checked) ~ .tab-sign-in {
     display: none;
 }
 
-.tab-1, .tab-2, .tab-title-1, .tab-title-2 { 
+.tab, .tab-title { 
     display: block;
-    margin: 0 2%;
 }
 
-.tab-1:checked + .tab-title-1, 
-.tab-2:checked + .tab-title-2 {
+#signUpTab:checked + .tab-title-sign-up, 
+#signInTab:checked + .tab-title-sign-in {
     position: relative;
     z-index: 1;
     animation: pushTab;
     animation-duration: 400ms;
 }
 
-.tab-1:not(:checked) + .tab-title-1, 
-.tab-2:not(:checked) + .tab-title-2 {
+#signUpTab:not(:checked) + .tab-title-sign-up, 
+#signInTab:not(:checked) + .tab-title-sign-in {
     animation: unpushTab;
     animation-duration: 400ms;
     border: none;
@@ -161,14 +159,14 @@ input[type="radio"] {
     left: 0;
 }
 
-.tab-1 :checked + .tab-title-1 + .tab-content,
-.tab-2 :checked + .tab-title-2 + .tab-content { 
+#signUpTab :checked + .tab-title-sign-up + .tab-content,
+#signInTab :checked + .tab-title-sign-in + .tab-content { 
     display: block; 
     width: 28vw;
 }
 
-.tab-1 :checked ~ .tab-content,
-.tab-2 :checked ~ .tab-content { 
+#signUpTab :checked ~ .tab-content,
+#signInTab :checked ~ .tab-content { 
     display: block;
 }
 
@@ -177,9 +175,13 @@ input[type="radio"] {
     flex-direction: row;
     position: relative;
     margin-top: 8%;
+    padding: 1.5% 0 0 1%;
+    margin-left: 36%;
+    margin-right: 36%;
+    background-color: rgba(0,0,0,0.5);
 }
 
-.tab-title-1, .tab-title-2 {
+.tab-title {
     background: none; 
     padding: 5px 0; 
     width: 24%;
@@ -188,13 +190,6 @@ input[type="radio"] {
     text-align: center;
     color: white;
     font-size: 140%;
-}
-
-div.tabs {
-    padding: 1.5% 0 0 1%;
-    margin-left: 36%;
-    margin-right: 36%;
-    background-color: rgba(0,0,0,0.5);
 }
 
 @keyframes pushTab {
@@ -227,13 +222,14 @@ div.tabs {
         margin: 10% 25% 5% 25%;
     }
 
-    div.tabs {
+    .tabs {
         width: 80vw;
         margin-left: 10%;
         padding-left: 0;
     }
 
-    .tab :checked + .tab-title + .tab-content { 
+    #signUpTab :checked + .tab-title-sign-up + .tab-content,
+    #signInTab :checked + .tab-title-sign-in + .tab-content { 
         display: block; 
         width: 80vw;
         right: 10%;
@@ -241,7 +237,8 @@ div.tabs {
 }
 
 @media screen and (min-width:640px) and (max-width:1080px) {
-    .signUpForm fieldset input[type="submit"] {
+    #signUpTab :checked + .tab-title-sign-up + .tab-content,
+    #signInTab :checked + .tab-title-sign-in + .tab-content { 
         width: 50%;
         margin: 5% 25%;
     }
