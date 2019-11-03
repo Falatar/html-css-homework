@@ -12,30 +12,30 @@
             <label for="signUpTab" class="tab-title-sign-up tab-title">SIGN UP</label> 
             <input type="radio" id="signInTab" name="tab-group">
             <label for="signInTab" class="tab-title-sign-in tab-title">SIGN IN</label> 
-            <section class="tab-content tab-sign-up tab">
-                <form class="signUpForm" action="https://reqres.in/api/register" method="POST">
+            <section class="tab-content tab-sign-up">
+                <form class="form" action="https://reqres.in/api/register" method="POST">
                     <fieldset class="fieldset">
                         <input name="phone" placeholder="Mobile Phone"/>
                         <input name="email" placeholder="Email ID"/>
                         <input type="password" name="password" placeholder="Password"/>
                         <div class="consent">
-                            <input type="checkbox" id="chkBox">
-                            <label for="chkBox"></label>
-                            <h3>I agree to terms and conditions</h3>
+                            <input type="checkbox" id="chkBox_signUpTab" class="agreement">
+                            <label for="chkBox_signUpTab"></label>
+                            <h3 class="warning">I agree to terms and conditions</h3>
                         </div>
                         <input type="submit" value="REGISTER"/>
                     </fieldset>
                 </form>
             </section> 
-            <section class="tab-content tab-sign-in tab">
-                <form class="signUpForm" action="https://reqres.in/api/login" method="POST">
+            <section class="tab-content tab-sign-in">
+                <form class="form" action="https://reqres.in/api/login" method="POST">
                     <fieldset class="fieldset">
                         <input name="email" placeholder="Email ID"/>
                         <input type="password" name="password" placeholder="Password"/>
                         <div class="consent">
-                            <input type="checkbox" id="chkBox2">
-                            <label for="chkBox2"></label>
-                            <h3>I agree to terms and conditions</h3>
+                            <input type="checkbox" id="chkBox_signInTab" class="agreement">
+                            <label for="chkBox_signInTab"></label>
+                            <h3 class="warning">I agree to terms and conditions</h3>
                         </div>
                         <input type="submit" value="LOGIN"/>
                     </fieldset>
