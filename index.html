@@ -1,46 +1,50 @@
-  
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Step3</title>
-        <link rel="stylesheet" href="loginForm.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
+
+<head>
+    <title>Step3</title>
+    <link rel="stylesheet" href="loginForm.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="main">
         <div class="tabs">
             <input type="radio" id="signUpTab" name="tab-group" checked="checked">
-            <label for="signUpTab" class="tab-title-sign-up tab-title">SIGN UP</label> 
+            <label for="signUpTab" class="tab-title-sign-up tab-title">SIGN UP</label>
             <input type="radio" id="signInTab" name="tab-group">
-            <label for="signInTab" class="tab-title-sign-in tab-title">SIGN IN</label> 
+            <label for="signInTab" class="tab-title-sign-in tab-title">SIGN IN</label>
             <section class="tab-content tab-sign-up">
                 <form class="form" action="https://reqres.in/api/register" method="POST">
                     <fieldset class="fieldset">
-                        <input name="phone" placeholder="Mobile Phone"/>
-                        <input name="email" placeholder="Email ID"/>
-                        <input type="password" name="password" placeholder="Password"/>
+                        <input name="phone" placeholder="Mobile Phone" />
+                        <input name="email" placeholder="Email ID" />
+                        <input type="password" name="password" placeholder="Password" />
                         <div class="consent">
                             <input type="checkbox" id="chkBox_signUpTab" class="agreement">
                             <label for="chkBox_signUpTab"></label>
                             <h3 class="warning">I agree to terms and conditions</h3>
                         </div>
-                        <input type="submit" value="REGISTER"/>
+                        <input type="submit" value="REGISTER" />
                     </fieldset>
                 </form>
-            </section> 
+            </section>
             <section class="tab-content tab-sign-in">
                 <form class="form" action="https://reqres.in/api/login" method="POST">
                     <fieldset class="fieldset">
-                        <input name="email" placeholder="Email ID"/>
-                        <input type="password" name="password" placeholder="Password"/>
+                        <input name="email" placeholder="Email ID" />
+                        <input type="password" name="password" placeholder="Password" />
                         <div class="consent">
                             <input type="checkbox" id="chkBox_signInTab" class="agreement">
                             <label for="chkBox_signInTab"></label>
                             <h3 class="warning">I agree to terms and conditions</h3>
                         </div>
-                        <input type="submit" value="LOGIN"/>
+                        <input type="submit" value="LOGIN" />
                     </fieldset>
                 </form>
-            </section> 
+            </section>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
