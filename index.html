@@ -17,9 +17,9 @@
             <section class="tab-content tab-sign-up">
                 <form class="form" action="https://reqres.in/api/register" method="POST">
                     <fieldset class="fieldset">
-                        <input name="phone" placeholder="Mobile Phone" />
-                        <input name="email" placeholder="Email ID" />
-                        <input type="password" name="password" placeholder="Password" />
+                        <input name="phone" placeholder="Mobile Phone" type="tel"/>
+                        <input name="email" placeholder="Email ID" type="email"/>
+                        <input type="password" name="password" placeholder="Password"/>
                         <div class="consent">
                             <input type="checkbox" id="chkBox_signUpTab" class="agreement">
                             <label for="chkBox_signUpTab"></label>
@@ -32,7 +32,7 @@
             <section class="tab-content tab-sign-in">
                 <form class="form" action="https://reqres.in/api/login" method="POST">
                     <fieldset class="fieldset">
-                        <input name="email" placeholder="Email ID" />
+                        <input name="email" placeholder="Email ID" type="email"//>
                         <input type="password" name="password" placeholder="Password"/>
                         <div class="consent">
                             <input type="checkbox" id="chkBox_signInTab" class="agreement">

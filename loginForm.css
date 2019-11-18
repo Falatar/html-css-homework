@@ -200,7 +200,7 @@ input[type="radio"] {
     flex-direction: row;
     flex-wrap: wrap;
     position: relative;
-    padding: 1.5% 0 0 1%;
+    padding: 1.5% 0 0 0;
     background-color: rgba(0,0,0,0.5);
 }
 
